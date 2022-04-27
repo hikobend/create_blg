@@ -62,8 +62,7 @@ gem 'devise'
 # デバッグ用
 gem 'pry-rails'
 
-# CSS FW
-gem 'bootstrap'
+gem 'tailwindcss-rails'
 
 # bootstrapに必要なもの
 gem 'jquery-rails'
