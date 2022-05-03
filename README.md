@@ -6,3 +6,5 @@
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=hikobend&theme=onedark&column=7
 )](https://github.com/ryo-ma/github-profile-trophy)
+
+ユーザー新規作成機能を削除し、ユーザーログイン機能のみにする
