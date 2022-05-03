@@ -1,0 +1,25 @@
+// Place all the styles related to the tags controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.category{
+  max-width: 400px;
+  min-width: 300px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.category-list {
+  display: block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #000;
+}
