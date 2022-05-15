@@ -31,9 +31,9 @@
     <%= yield %>
     <footer>
       <% if user_signed_in? %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login" %>
       <% else %>
-        <%= link_to 'ログイン', new_user_session_path, class: "btn btn-outline-primary" %>
+        <%= link_to 'ログイン', new_user_session_path, class: "login" %>
       <% end %>
     </footer>
   </body>
