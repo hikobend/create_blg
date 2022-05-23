@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'mypage/top'
   devise_for :users
+  # トップページに移動
   root to: 'home#top'
-  resources :tags
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # ログイン後の最初のページ
+  resources :users, only: %i[show]
+
+  resources :tags, only: %i[index show]
+
 end
