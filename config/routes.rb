@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # ログイン後の最初のページ
   resources :users, only: %i[show]
 
-  resources :tags, only: %i[index show]
+  resources :tags
 
 end

@@ -1,5 +1,8 @@
 <div class='category'>
-  <h1>カテゴリー</h1>
+  <div class='tag-top inline-block vertical-align: middle;'>
+    <h3 class="inline-block vertical-align: middle;">カテゴリー</h3>
+    <%= link_to image_tag("plus.png", width: '70'), new_tag_path %>
+  </div>
   <% @tags.each do |tag| %>
     <p><%= link_to tag.name, tag_path(tag), class: 'category-list' %></p>
   <% end %>
