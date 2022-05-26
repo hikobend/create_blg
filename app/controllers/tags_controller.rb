@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TagsController < ApplicationController
   def index
     @tags = Tag.all
@@ -45,8 +47,8 @@ class TagsController < ApplicationController
   end
 
   private
+
   def tag_params
     params.permit(:name)
   end
-
 end
