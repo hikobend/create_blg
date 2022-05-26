@@ -1,0 +1,14 @@
+<h3>オペレータの追加</h3>
+
+<%= form_with(modal: @tag, url: tags_path, local: true) do |f| %>
+
+  <div class="field-form">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, placeholder: "名前" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.submit "作成" %>
+  </div>
+
+<% end %>

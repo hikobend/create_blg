@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
   # トップページに移動
@@ -5,6 +7,5 @@ Rails.application.routes.draw do
   # ログイン後の最初のページ
   resources :users, only: %i[show]
 
-  resources :tags, only: %i[index show]
-
+  resources :tags
 end
