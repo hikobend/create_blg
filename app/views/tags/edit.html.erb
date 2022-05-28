@@ -1,0 +1,14 @@
+<h3>ユーザーの変更</h3>
+
+<%= form_with(modal: @tag, url: tag_path(@tag), local: true, method: :put) do |f| %>
+  
+  <div class="field-form">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, :placeholder =>"#{@tag.name}" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.submit "更新" %>
+  </div>
+
+<% end %>
