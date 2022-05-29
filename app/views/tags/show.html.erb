@@ -1,4 +1,4 @@
 <h3>-category-</h3>
 <h1><%= @tag.name %></h1>
 <%= link_to "タグ編集", edit_tag_path %>
-
+<%= link_to "タグ削除", tag_path(@tag), method: :delete %>
