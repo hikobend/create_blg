@@ -82,3 +82,8 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
 end
+
+# マークダウン形式用
+gem 'redcarpet', '~> 2.3.0'
+# シンタックスハイライト用
+gem 'coderay'

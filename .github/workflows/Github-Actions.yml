@@ -5,7 +5,7 @@ on:
   #feature/をpushするとこのワークフローを実行するようにする
   push:
     branches:
-      - '*'
+      - 'add-*'
   pull_request:
     branches:
       - '*'
