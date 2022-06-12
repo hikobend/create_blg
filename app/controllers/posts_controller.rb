@@ -2,7 +2,7 @@
 
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.order(id: "DESC")
+    @posts = Post.all.order(id: 'DESC')
   end
 
   def show
@@ -26,8 +26,7 @@ class PostsController < ApplicationController
 
   private
 
-  def post_params
-    params.permit(:title, :tag, :body)
-  end
-
+    def post_params
+      params.permit(:title, :tag, :body)
+    end
 end
