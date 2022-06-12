@@ -1,3 +1,5 @@
 User.create!(name: 'Aaユーザー1', email: 'a@a.com', password: 'aaaaaa')
 Tag.create!(name: 'Docker')
 Tag.create!(name: 'Ruby on Rails')
+Post.create!(title: '初めての投稿', tag: 'Ruby on Rails', photo: '1', body: 'これはサンプルのTextです。Ruby on Railsについて書きました。ぜひみてください。よろしくお願いします')
+Post.create!(title: '2回目の投稿', tag: 'Github Actions', photo: '1', body: 'CI/CDツールの一つである、Github Actionsについて記事を作成しました。みていただけると嬉しいです。')
