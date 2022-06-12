@@ -1,1 +1,25 @@
-new
+<h3>新規投稿</h3>
+
+<%= form_with(modal: @post, url: posts_path, local: true) do |f| %>
+
+  <div class="field-form">
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true, placeholder: "タイトル" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :tag %>
+    <%= f.text_field :tag, autofocus: true, placeholder: "タグ" %>
+  </div>
+  
+  <div class="field-form">
+    <%= f.label :body %>
+    <%= f.text_area :body, autofocus: true, placeholder: "本文" %>
+  </div>
+  
+  <div class="field-form">
+    <%= f.submit "作成" %>
+  </div>
+
+<% end %>
+
