@@ -1,19 +1,22 @@
-<% @posts.each do |post| %>
-  <div class="container">
-    <div class="card mb-3">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img alt="アイコン" height="200" src="/assets/noimage.png" width="400" />
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h6 class="card-title"><small class="text-muted">作成日 : <%= l post.created_at, format: :short %></small></h6>
-            <h4 class="card-title"><%= link_to post.title, "#", class: 'post-title' %></h4>
-            <h6 class="card-title"><small class="text-muted"><%= post.tag %></small></h6>
-            <p class="card-text"> <%= post.body.truncate(50)  %></p>
-          </div>
+<div class="container">
+  <% if user_signed_in? %>
+    <%= link_to '記事投稿', new_post_path %>
+  <% end %>
+  <% @posts.each do |post| %>
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img alt="アイコン" height="200" src="/assets/noimage.png" width="400" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h6 class="card-title"><small class="text-muted">作成日 : <%= l post.created_at, format: :short %></small></h6>
+          <h4 class="card-title"><%= link_to post.title, post_path(post), class: 'post-title' %></h4>
+          <h6 class="card-title"><small class="text-muted"><%= post.tag %></small></h6>
+          <p class="card-text"> <%= post.body.truncate(50)  %></p>
         </div>
       </div>
     </div>
   </div>
-<% end %>
+  <% end %>
+</div>
