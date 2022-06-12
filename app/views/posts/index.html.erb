@@ -1,15 +1,17 @@
 <% @posts.each do |post| %>
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="noimage.png">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h6 class="card-title"><small class="text-muted"><%= post.created_at %><%= post.updated_at %></small></h6>
-          <h4 class="card-title"><%= post.title %></h4>
-          <h6 class="card-title"><small class="text-muted"><%= post.tag %></small></h6>
-          <p class="card-text"> <%= post.body %></p>
+  <div class="container">
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img alt="アイコン" height="200" src="/assets/noimage.jpg" width="200" />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h6 class="card-title"><small class="text-muted"><%= post.created_at %><%= post.updated_at %></small></h6>
+            <h4 class="card-title"><%= post.title %></h4>
+            <h6 class="card-title"><small class="text-muted"><%= post.tag %></small></h6>
+            <p class="card-text"> <%= post.body %></p>
+          </div>
         </div>
       </div>
     </div>
