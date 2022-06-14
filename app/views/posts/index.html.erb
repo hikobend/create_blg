@@ -1,6 +1,6 @@
 <div class="container">
   <% if user_signed_in? %>
-    <%= link_to '記事投稿', new_post_path %>
+    <%= link_to '記事投稿', new_post_path, class: 'btn btn-primary' %>
   <% end %>
   <% @posts.each do |post| %>
   <div class="card mb-3">
