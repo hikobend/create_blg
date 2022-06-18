@@ -12,14 +12,19 @@
     <div class="mb-3">
       <div class="field-form">
         <%= f.label :tag, class: 'form-label' %>
-        <%= f.text_field :tag, autofocus: true, placeholder: "タグ", class: 'form-control' %>
+        <%= f.text_field :tag, placeholder: "タグ", class: 'form-control' %>
       </div>
     </div>
 
     <div class="mb-3">
       <div class="field-form">
         <%= f.label :body, class: 'form-label' %>
-        <%= f.text_area :body, autofocus: true, placeholder: "本文", class: 'form-control' %>
+        <%= f.text_area :body, placeholder: "本文", class: 'form-control', id: "mde" %>
+        <script>
+          const mde = new SimpleMDE({
+              element: document.getElementById("mde")
+          });
+        </script>
       </div>
     </div>
 

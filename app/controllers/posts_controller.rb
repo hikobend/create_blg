@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
+  layout 'post'
   def index
     @posts = Post.all.order(id: 'DESC')
   end

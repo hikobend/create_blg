@@ -1,3 +1,7 @@
+main{
+  background-color: rgba(209, 209, 209, 0.2);
+}
+
 .post-title{
   text-decoration: none;
   color: #000;
@@ -11,4 +15,21 @@
 .post-show-title{
   margin: 30px 0;
   padding: 30px 0;
+}
+
+.row{
+  height: 150px;
+}
+
+.col-md-4{
+  text-align: center;
+  background-color: rgba(209, 209, 209, 0.5);
+}
+
+.card{
+  margin: 30px 0 0 0 ;
+}
+
+.post-body{
+  border: 1px solid #000;
 }
