@@ -1,2 +1,22 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<div class="container">
+    <small class="text-muted">作成日 : <%= l @post.created_at, format: :default %></small>
+    <small class="text-muted">編集日 : <%= l @post.updated_at, format: :default %></small>
+  <div class="mb-3">
+    <div class="field-form">
+      <h1><%= @post.title %></h1>
+    </div>
+  </div>
+  <div class="mb-3">
+    <div class="field-form">
+    <small class="text-muted"><%= @post.tag %></small>
+    </div>
+  </div>
+  <hr />
+  <div class="mb-3">
+    <div class="field-form">
+      <h3><%= markdown(@post.body).html_safe %></h3>
+    </div>
+  </div>
+  <%= link_to '編集画面', edit_post_path, class: 'btn btn-success' %>
+  <%= link_to "投稿削除", post_path(@post), method: :delete, class: 'btn btn-danger' %>
+</div>
