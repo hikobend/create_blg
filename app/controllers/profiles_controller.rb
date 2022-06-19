@@ -30,5 +30,4 @@ class ProfilesController < ApplicationController
     def profile_params
       params.permit(:profile)
     end
-
 end
