@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   resources :tags
   resources :posts
   resources :profiles
+  resources :contacts, only: %i[new create]
   resources :contacts, only: [:new, :create]
+  post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
+  post 'contacts/back', to: 'contacts#back', as: 'back'
+  get 'done', to: 'contacts#done', as: 'done'
 end
