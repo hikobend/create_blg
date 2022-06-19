@@ -1,2 +1,21 @@
-<h1>Profiles#edit</h1>
-<p>Find me in app/views/profiles/edit.html.erb</p>
+<div class="container">
+  <h1>編集画面</h1>
+  <%= form_with(modal: @profile, url: profile_path(@profile), local: true, method: :put) do |f| %>
+    <div class="mb-3">
+      <div class="field-form">
+        <%= f.text_area :profile, value: "#{@profile.profile}", :placeholder =>"#{@profile.profile}", class: 'form-control', id: "mde" %>
+        <script>
+          const mde = new SimpleMDE({
+              element: document.getElementById("mde")
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="field-form">
+        <%= f.submit "作成", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

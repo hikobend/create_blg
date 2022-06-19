@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ProfilesController < ApplicationController
+  layout 'profile'
   def index
     @profiles = Profile.all.order(id: 'DESC')
   end

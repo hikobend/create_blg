@@ -1,12 +1,10 @@
 <div class="container">
   <% @profiles.each do |profile| %>
-  <div class="card mb-3">
   <% if user_signed_in?%>
-    <h2><%= link_to '詳細画面', profile_path(profile), class: 'btn btn-primary' %></h2>
+    <%= link_to '編集画面', edit_profile_path(profile), class: 'btn btn-success' %>
   <% end %>
-    <h6><small class="text-muted">作成日 : <%= l profile.created_at, format: :default %></small></h6>
-    <h6><small class="text-muted">編集日 : <%= l profile.updated_at, format: :default %></small></h6>
-    <h2 class='post-title'><%= markdown(profile.profile).html_safe %></h2>
-  </div>
+  <h6><small class="text-muted">作成日 : <%= l profile.created_at, format: :default %></small></h6>
+  <h6><small class="text-muted">編集日 : <%= l profile.updated_at, format: :default %></small></h6>
+  <h2 class='post-title'><%= markdown(profile.profile).html_safe %></h2>
   <% end %>
 </div>
