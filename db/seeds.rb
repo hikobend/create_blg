@@ -5,3 +5,5 @@ Profile.create!(profile: "# プロフィール\r\nアイコン挿入\r\n## 自�
 11.times do |i|
   Post.create!(title: "投稿#{i+1}", tag: "Ruby", photo: nil, body: "## こんにちは\r\nなんとなくです。")
 end
+# メール用seed
+Member.create!(name_sei: '大塩', name_mei: '平八郎', email: 'oosio@heihatirou.com')
