@@ -3,33 +3,65 @@
  *= require_self
  */
 
-  @import "bootstrap";
+@import "bootstrap";
 
-  .login{
-    color: blue;
-    text-decoration: none;
-  }
+.login{
+  color: blue;
+  text-decoration: none;
+}
 
-  .inline-block{
-    display: inline-block;
-  }
+.inline-block{
+  display: inline-block;
+}
 
-  .tag-top{
-    margin: 10px;
-  }
+.tag-top{
+  margin: 10px;
+}
 
-  .icon{
-    width: 80px;
-    height: 80px;
-  }
+.icon{
+  width: 80px;
+  height: 80px;
+}
 
-  .header-list{
-    text-decoration: none;
-    color: black;
-  }
-  
-  .category-title{
-    text-decoration: none;
-    color: #000;
-    font-size: 30px;
-  }
+.header-list{
+  text-decoration: none;
+  color: black;
+}
+
+.category-title{
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+}
+
+.btn{
+  padding: 10px;
+  margin: 20px 0px;
+}
+
+.form-control{
+  background-color: #C8DEFF;
+}
+
+.container{
+  background-color: #fff;
+}
+
+.pagination>li>a {          
+  border: none;
+  color: #696969;
+}
+
+.pagination>.active>a {     
+  background: #93c9ff;
+  border-radius: 15px; 
+}
+
+.pagination>li>a:hover {        
+  border-radius: 15px; 
+}
+
+.btn-blue{
+  background-color: #0d6af4;
+  color: #fff;
+}

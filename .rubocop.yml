@@ -81,7 +81,7 @@ Metrics/ClassLength:
 
 Metrics/MethodLength:
   CountComments: false
-  Max: 15
+  Max: 30
   Exclude:
     - "lib/tasks/dev.rake"
 

@@ -5,7 +5,7 @@ on:
   #feature/をpushするとこのワークフローを実行するようにする
   push:
     branches:
-      - '*'
+      - 'add-*'
   pull_request:
     branches:
       - '*'
@@ -36,4 +36,4 @@ jobs:
           docker-compose run --rm web bundle exec rubocop
       - name: run rspec
         run: |
-          docker-compose run web bundle exec rspec
+          docker-compose run --rm web bundle exec rspec

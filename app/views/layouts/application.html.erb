@@ -7,6 +7,10 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
     <% if flash[:notice] %>
@@ -21,14 +25,16 @@
         </div>
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <nav class="my-2 my-md-0 mr-md-3">
-          <a class="p-2 text-dark" ><%= link_to "ホーム", "#", class: "header-list" %></a>
-          <a class="p-2 text-dark" ><%= link_to "プロフィール", "#", class: "header-list" %></a>
+          <a class="p-2 text-dark" ><%= link_to "投稿", posts_path, class: "header-list" %></a>
+          <a class="p-2 text-dark" ><%= link_to "プロフィール", profiles_path, class: "header-list" %></a>
           <a class="p-2 text-dark" ><%= link_to "タグ一覧", tags_path, class: "header-list" %></a>
           <a class="p-2 text-dark" ><%= link_to "お問い合わせ", "#", class: "header-list" %></a>
         </nav>  
       </div>
     </header>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
     <footer>
       <% if user_signed_in? %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login" %>
